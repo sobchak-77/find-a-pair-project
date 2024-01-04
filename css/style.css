@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Pushki Pro";
+  font-display: swap;
+  src: local("Pushki-Pro-Regular"),
+    url("../fonts/PushkiPro.woff2") format("woff2"),
+    url("../fonts/PushkiPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.page {
+  color: white;
+  font-family: "Pushki Pro", sans-serif;
+  background-color: #1c1c1c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.game-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15px;
+  max-width: 445px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  color: transparent;
+  font-size: 65px;
+  font-weight: bold;
+  background-color: #1a3461;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color  0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: #5b65ccdd;
+}
+
+.card:active {
+  transform: scale(0.9);
+}
+
+.card.opened {
+  color: white;
+  background-color: #0343b3;
+}
+
+.card.matched {
+  color: white;
+  background-color: rgb(206, 136, 6);
+}
+
+.card.matched:active {
+  transform: unset;
+}
+
+.btn-wrap {
+  text-align: center;
+}
+
+.btn {
+  padding: 13px 20px;
+  text-align: center;
+  color: inherit;
+  font-size: 37px;
+  background-color: #0343b3;
+  border: 1px solid white;
+  border-radius: 10px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #366fd2;
+}
+
+.btn-hidden {
+  display: none;
+}
