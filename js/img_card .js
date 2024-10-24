@@ -7,7 +7,7 @@ export class ImgCard extends Card {
     this._number = value;
 
     const paramClass = 'game__card-img';
-    const paramSrc = `../img/sock_${value}.svg`;
+    const paramSrc = `find-a-pair-project/img/sock_${value}.svg`;
     const paramAlt = 'Sock';
 
     this.img = getImg(paramClass, paramSrc, paramAlt);
