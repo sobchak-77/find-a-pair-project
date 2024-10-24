@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a pair</title>
+  <link rel="preload" href="fonts/CatComic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body class="page__body">
+  <section class="main">
+    <div class="container">
+      <div class="header-wrap">
+        <!-- main game title -->
+        <h1 class="main-title">
+          Find a pair
+        </h1>
+        <!-- game stopwatch -->
+        <div class="stopwatch">
+          <h2 class="stopwatch__title">
+            Your time
+          </h2>
+          <div class="stopwatch__wrap">
+            <div class="stopwatch__block">
+              <div class="stopwatch__time" id="second">00</div>
+            </div>
+            <div class="stopwatch__block stopwatch__block--colon">
+              :
+            </div>
+            <div class="stopwatch__block">
+              <div class="stopwatch__time" id="millisec">00</div>
+            </div>
+          </div>
+        </div>
+        <!-- start / re-start button -->
+        <div class="btn-wrap">
+          <button class="re-btn" id="re-btn">start</button>
+        </div>
+      </div>
+      <!-- hello text -->
+      <p class="hello-txt" id="hello-txt">
+        Press START to dive into the exciting world of sock hunting
+      </p>
+      <!-- game desk -->
+      <div class="game" id="game"></div>
+    </div>
+  </section>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
