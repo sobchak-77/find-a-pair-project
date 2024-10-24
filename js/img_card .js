@@ -12,7 +12,7 @@ export class ImgCard extends Card {
 
     this.img = getImg(paramClass, paramSrc, paramAlt);
     this.img.onerror = () => {
-      this.img.src = '../img/no_sock.png';
+      this.img.src = 'sobchak-77.github.io/img/no_sock.png';
       throw new Error('You have problems with image loading');
     };
 
