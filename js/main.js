@@ -24,14 +24,14 @@ function startTimer() {
     millisecEl.textContent = '0' + millisec;
   } else if (millisec > 9) {
     millisecEl.textContent = millisec;
-  };
+  }
 
   if (millisec > 99) {
     second++;
     secondEl.textContent = '0' + second;
     millisec = 0;
     millisecEl.textContent = '0' + millisec;
-  };
+  }
 
   // --- change seconds ---
 
@@ -39,15 +39,15 @@ function startTimer() {
     secondEl.textContent = '0' + second;
   } else if (second > 9) {
     secondEl.textContent = second;
-  };
+  }
 
   // --- time is over ---
 
   if (second === 60) {
     clearInterval(interval);
     showLoseTxt();
-  };
-};
+  }
+}
 
 // --- reset all stopwatch values ---
 function resetTimer() {
@@ -58,7 +58,7 @@ function resetTimer() {
   // timer values
   secondEl.textContent = '00';
   millisecEl.textContent = '00';
-};
+}
 
 // --- show the current score ---
 function showScoreTxt() {
@@ -67,7 +67,7 @@ function showScoreTxt() {
 
   resetTimer();
   gameContainer.append(score);
-};
+}
 
 // --------------------
 // --- THE GAME END ---
@@ -80,7 +80,7 @@ function showLoseTxt() {
   loseTxt.textContent = 'Oops, game over... Try again!';
 
   gameContainer.append(loseTxt);
-};
+}
 
 function showWinTxt() {
   gameContainer.innerHTML = '';
@@ -90,7 +90,7 @@ function showWinTxt() {
   winTxt.textContent = `All pairs found. Good job. Let's try again!`;
 
   gameContainer.append(winTxt);
-};
+}
 
 // -------------------------
 // --- GAME DESK SECTION ---
@@ -118,7 +118,7 @@ function flipCard(card) {
     card_1 = card;
   } else {
     card_2 = card;
-  };
+  }
 
   // close cards if both are UNMATCHED
   if (card_1 !== null && card_2 !== null) {
@@ -129,8 +129,8 @@ function flipCard(card) {
         card_2.opened = false;
         card_2 = null;
       }, 400);
-    };
-  };
+    }
+  }
 
   // two opened cards are the SAME
   if (card_1 !== null && card_2 !== null) {
@@ -139,8 +139,8 @@ function flipCard(card) {
       card_1 = null;
       card_2.matched = true;
       card_2 = null;
-    };
-  };
+    }
+  }
 
   // all cards OPENED and MATCHED
   let matchArr = document.querySelectorAll('.matched');
@@ -148,8 +148,8 @@ function flipCard(card) {
     // stop the stopwatch and show score
     clearInterval(interval);
     setTimeout(showWinTxt, 400);
-  };
-};
+  }
+}
 
 // --- to start the game ---
 function startGame(cardFaceArr) {
@@ -160,13 +160,13 @@ function startGame(cardFaceArr) {
   // create cards with values
   for (const face of mixedFaceArr) {
     cardArr.push(new ImgCard(container, face, flipCard));
-  };
+  }
 
   // reset stopwatch values
   resetTimer();
 
   gameContainer.append(container);
-};
+}
 
 // --- clean desk game, stopwatch and start new game ---
 restartBtn.addEventListener('click', () => {
@@ -175,4 +175,4 @@ restartBtn.addEventListener('click', () => {
   resetTimer();
   gameContainer.innerHTML = '';
   startGame(cardFaceArr);
-});
+})

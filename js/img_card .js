@@ -2,17 +2,16 @@ import { Card } from './card.js';
 import { getImg } from './service.js';
 
 export class ImgCard extends Card {
-
   set number(value) {
     this._number = value;
 
     const paramClass = 'game__card-img';
-    const paramSrc = `/find-a-pair-project/img/sock_${value}.svg`;
+    const paramSrc = `../img/sock_${value}.svg`;
     const paramAlt = 'Sock';
 
     this.img = getImg(paramClass, paramSrc, paramAlt);
     this.img.onerror = () => {
-      this.img.src = '/find-a-pair-project/img/no_sock.png';
+      this.img.src = '../img/no_sock.png';
       throw new Error('You have problems with image loading');
     };
 
@@ -22,4 +21,4 @@ export class ImgCard extends Card {
   get number() {
     return this._number;
   }
-};
+}

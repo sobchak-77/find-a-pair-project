@@ -16,6 +16,21 @@
     gap: 35px;
     margin-bottom: 60px;
   }
+
+  .game__desk {
+    gap: 15px;
+  }
+
+  .game__card {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 690px) {
+  .game__desk {
+    max-width: 405px;
+  }
 }
 
 @media (max-width: 577px) {

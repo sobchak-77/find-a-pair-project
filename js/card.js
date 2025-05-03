@@ -54,4 +54,4 @@ export class Card {
   get matched() {
     return this._matched;
   }
-};
+}

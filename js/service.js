@@ -4,7 +4,7 @@ export function getDivEl(className) {
   divEl.classList.add(className);
 
   return divEl;
-};
+}
 
 // --- get an image element ---
 export function getImg(className, url, imgAlt) {
@@ -14,7 +14,7 @@ export function getImg(className, url, imgAlt) {
   imgEl.alt = imgAlt;
 
   return imgEl;
-};
+}
 
 // --- get numbers array ---
 export function createNumArr(pairs) {
@@ -25,7 +25,7 @@ export function createNumArr(pairs) {
   };
 
   return cardNumArr;
-};
+}
 
 // --- get shuffle numbers array ---
 export function shuffleArr(arr) {
@@ -35,4 +35,4 @@ export function shuffleArr(arr) {
   };
 
   return arr;
-};
+}
