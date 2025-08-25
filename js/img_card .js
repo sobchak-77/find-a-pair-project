@@ -6,12 +6,12 @@ export class ImgCard extends Card {
     this._number = value;
 
     const paramClass = 'game__card-img';
-    const paramSrc = `../img/sock_${value}.svg`;
+    const paramSrc = `img/sock_${value}.svg`;
     const paramAlt = 'Sock';
 
     this.img = getImg(paramClass, paramSrc, paramAlt);
     this.img.onerror = () => {
-      this.img.src = '../img/no_sock.png';
+      this.img.src = 'img/no_sock.png';
       throw new Error('You have problems with image loading');
     };
 
